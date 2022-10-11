@@ -1,4 +1,5 @@
 import "package:flutter/material.dart"; //import can be anything like curptoino , material or widgets
+import "HomePage.dart";
 
 //main method is entry point of flutter
 void main() {
@@ -13,13 +14,7 @@ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child:const Text("hello world"),
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
