@@ -12,7 +12,10 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text("hello world"),
+          color: Colors.blue,
+          child: Text("hello world",
+          style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
       drawer: Drawer(),
