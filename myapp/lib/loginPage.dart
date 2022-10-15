@@ -1,3 +1,4 @@
+
 import "package:flutter/material.dart";
 
 
@@ -6,7 +7,10 @@ import "package:flutter/material.dart";
 
 BoxDecoration myborder(){
   return BoxDecoration(
-    border: Border.all()
+    border: Border.all(
+      color: Colors.red,
+      width: 1
+    )
   );
 }
 
@@ -44,8 +48,8 @@ class LoginPage extends StatelessWidget {
                 decoration: myborder(),
                 child: const Text(
                   "hello world",
-                  style: const TextStyle(
-                    color: const Color.fromARGB(255, 35, 106, 164),
+                  style:  TextStyle(
+                    color:  Color.fromARGB(255, 35, 106, 164),
                     fontSize: 20,
                   ),
                 ),
