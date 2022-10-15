@@ -9,6 +9,7 @@ void main() {
 
 //myApp class
 
+// ignore: camel_case_types
 class myApp extends StatelessWidget {
   final bool isauth = false;
   const myApp({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class myApp extends StatelessWidget {
       // home: HomePage(),// if "/" routes assigned dont use that
       // initialRoute: "/any_other_route_you_want_to_open_when_a_app_start",
       routes: {
-        "/" : (context)=> isauth ? HomePage() : LoginPage(), //conditional rendering by using flag
+        "/" : (context)=> isauth ? const HomePage() : const LoginPage(), //conditional rendering by using flag
         // "/add-post" :(context) => AddPost();
         },
     );

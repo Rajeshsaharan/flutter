@@ -1,4 +1,9 @@
+import 'dart:ffi';
+
 import "package:flutter/material.dart";
+
+
+
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,9 +17,10 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          color: Colors.blue,
-          child: Text("hello world",
-          style: TextStyle(fontSize: 20),
+          decoration: BoxDecoration(border: Border.all()),
+          child: Text(
+            "hello world",
+            style: TextStyle(fontSize: 20),
           ),
         ),
       ),

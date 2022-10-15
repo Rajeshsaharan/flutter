@@ -8,14 +8,33 @@ class LoginPage extends StatelessWidget {
     return Material(
       child: Center(
           child: Container(
-        child: Text(
-          "hello world",
-          style: TextStyle(
-            color: Colors.blue,
-            fontSize: 20,
-          ),
-          ),
-      )),
+            decoration: BoxDecoration(
+              border: Border.all()
+            ),
+            child: Column(
+              crossAxisAlignment:CrossAxisAlignment.center, //align items
+              mainAxisAlignment: MainAxisAlignment.center, // justify content
+              children : const [
+                  Text(
+                "hey this is an example",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 35, 106, 164),
+                  fontSize: 20,
+                ),
+              ),
+              SizedBox( // sizebox is used to give space like margin
+                height: 20,
+              ),
+              Text(
+                "hello world",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 35, 106, 164),
+                  fontSize: 20,
+                ),
+              ),
+              ] 
+            ),
+          )),
     );
   }
 }
