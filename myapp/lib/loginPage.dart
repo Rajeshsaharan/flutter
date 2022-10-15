@@ -1,5 +1,15 @@
 import "package:flutter/material.dart";
 
+
+
+//always define a BoxDecoration(not a Widget subclass ) and set a border for better inspection
+
+BoxDecoration myborder(){
+  return BoxDecoration(
+    border: Border.all()
+  );
+}
+
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -8,28 +18,36 @@ class LoginPage extends StatelessWidget {
     return Material(
       child: Center(
           child: Container(
-            decoration: BoxDecoration(
-              border: Border.all()
-            ),
-            child: Column(
-              crossAxisAlignment:CrossAxisAlignment.center, //align items
+            decoration:myborder(),
+            child: Column( // colums  === flex ==> flex-direction : column
+            //row -====> flex-direction : row 
+              crossAxisAlignment:CrossAxisAlignment.stretch, //align items
               mainAxisAlignment: MainAxisAlignment.center, // justify content
-              children : const [
-                  Text(
-                "hey this is an example",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 35, 106, 164),
-                  fontSize: 20,
+              children :  [
+                  Container(
+                    decoration: myborder(),
+                    child: const Text(
+                                  "hey this is an example",
+                                  style: TextStyle(
+                    color: Color.fromARGB(255, 35, 106, 164),
+                    fontSize: 20,
+                                  ),
+                                ),
+                  ),
+              Container(
+                decoration: myborder(),
+                child: const SizedBox( // sizebox is used to give space like margin
+                  height: 20,
                 ),
               ),
-              SizedBox( // sizebox is used to give space like margin
-                height: 20,
-              ),
-              Text(
-                "hello world",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 35, 106, 164),
-                  fontSize: 20,
+              Container(
+                decoration: myborder(),
+                child: const Text(
+                  "hello world",
+                  style: const TextStyle(
+                    color: const Color.fromARGB(255, 35, 106, 164),
+                    fontSize: 20,
+                  ),
                 ),
               ),
               ] 
